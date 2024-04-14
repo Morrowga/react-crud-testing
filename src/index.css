@@ -1,13 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@100..800&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: "Anek Malayalam", sans-serif;
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #060505;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.bottom-custom{
+  bottom: 7.5vh;
+}
+
+.text-big{
+  font-size: 2rem;
+}
+
+/* Loader Dots */
+.lds-dots {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 10px;
+}
+.lds-dots div {
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #5fd4f6;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-dots div:nth-child(1) {
+  left: 8px;
+  animation: lds-dots1 2s infinite;
+}
+.lds-dots div:nth-child(2) {
+  left: 8px;
+  animation: lds-dots2 2s infinite;
+}
+.lds-dots div:nth-child(3) {
+  left: 32px;
+  animation: lds-dots2 2s infinite;
+}
+@keyframes lds-dots1 {
+  0%,
+  100% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-dots2 {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(24px);
+  }
 }
